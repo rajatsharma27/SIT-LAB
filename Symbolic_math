@@ -1,0 +1,46 @@
+% Inverse Laplace
+clc, clear all
+
+syms x
+A = 1/(x^2 + 1);
+ilaplace(A)
+
+% Second Order Control System
+syms s w e
+C = (w^2)/(s^2 + 2*e*w*s + w^2)*(1/s)
+ilaplace(C)
+
+% Roots of a 2nd order equation
+syms x a b c
+p = (a*x^2 + b*x + c)
+solve(p)
+
+% Solving a Differential Equation
+clc, clear
+syms y(t)
+dsolve(diff(y) == sin(t))
+dsolve('Dy=sin(t)')
+
+% Integration
+syms x
+y = sin(x)
+int(y, 3*pi/2, pi/2)
+
+% Trigonometric properties
+syms z
+y = sin(z)^2 + cos(z)^2
+simplify(y)
+
+% First Order System Response
+syms t
+assume(t>0)
+c = 1 - exp(-(t/2))
+fplot(c)
+
+% Inverse of a Matrix
+syms x
+A = [x x^2; 0 3]
+B = inv(A)
+subs(B, x, 1)
+
+

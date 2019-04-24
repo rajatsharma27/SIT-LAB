@@ -1,0 +1,28 @@
+%% AIM - To display sin(t) and cos(t) values wrt time on a plot.
+
+% Name - Pranshu Verma
+% PRN - 16070123071
+% Date - 08/01/2019
+
+clc
+clear all
+close all
+
+% Choosing the value of t
+t = 0:0.01:2;
+
+% Equating sin(t) and cos(t) functions to x and y
+x = sin (2*pi*t);
+y = cos (2*pi*t);
+
+% Plotting Sin(t) and Cos(t) on the same graph
+plot(t,x,'--.r')
+hold on
+plot(t,y,'-- b','LineWidth',2)
+
+% Labelling the plot
+xlabel('Time','fontsize',15) % labelling the x-axis
+ylabel('Amplitude','fontsize',15) % labelling the y-axis
+title('Sine/Cosine waveforms wrt time','fontsize',20) % labelling the title
+legend('Sine wave','Cos wave') % % labelling the legends
+
